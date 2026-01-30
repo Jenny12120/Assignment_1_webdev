@@ -2,14 +2,18 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form>
+        <form id="location">
             <label for="title">Title:</label>
             <input type="text" id="title"><br/>
             <label for="description">Description:</label>
             <textarea id="description" rows="5" cols="50">Please enter a description of 1-3 sentences</textarea><br/>
             <label for="upload">Please select a file:</label>
-            <input type="file" id="upload"><br/>
-            <input type="submit" id="create" accept="image/*, .jpg, .jpeg, .png, .gif, .webp">
+            <input type="file" id="upload" accept="image/*, .jpg, .jpeg, .png, .gif, .webp"><br/>
+            <input type="button" id="create" value="Create Landmark">
         </form>
+        <div id="imagedisplay">
+
+        </div>
+        <script src="landmark.js"></script>
     </body>
 </html>
