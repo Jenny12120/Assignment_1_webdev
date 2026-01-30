@@ -1,6 +1,7 @@
 const images = [];
 const submit = document.getElementById("create");
 const display = document.getElementById("imagedisplay");
+const form = document.getElementById("landmark");
 
 function addImages() {
     const imageInput = document.getElementById("upload");
@@ -10,6 +11,8 @@ function addImages() {
         images.push(imgUrl)
     }
     renderImages();
+    form.reset();
+    
 }
 
 function renderImages(){

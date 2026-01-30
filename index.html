@@ -1,8 +1,25 @@
 
 <!DOCTYPE html>
 <html>
+    <style>
+      gmp-map {
+        height: 100%;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <head>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvgdXznWcLROFmLIUhK7g4oGri6tK94Qs&libraries=maps,marker"
+            defer>
+        </script>
+    </head>
     <body>
-        <form id="location">
+        <form id="landmark">
             <label for="title">Title:</label>
             <input type="text" id="title"><br/>
             <label for="description">Description:</label>
@@ -11,8 +28,8 @@
             <input type="file" id="upload" accept="image/*, .jpg, .jpeg, .png, .gif, .webp"><br/>
             <input type="button" id="create" value="Create Landmark">
         </form>
-        <div id="imagedisplay">
-
+        <div id="map">
+            <gmp-map center="43.2375, -79.8341" zoom="13" map-id="DEMO_MAP_ID" style="height: 400px"></gmp-map>
         </div>
         <script src="landmark.js"></script>
     </body>
