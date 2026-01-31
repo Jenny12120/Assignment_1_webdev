@@ -2,19 +2,16 @@
   box-sizing: border-box;
 }
 
-gmp-map {
-    height: 100%;
-    width: 50%;
-}
-
 #landmark {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
-    min-width: 400px;
-    width: 20%;
+    flex: 1 1 400px;   
+    max-width: 100%;
+    width: 100%;
     border: 2px solid #000000;
     padding: 5px 5px 5px 5px;
+    outline: 2px solid blue;
 }
 
 label {
@@ -51,9 +48,10 @@ textarea {
 
 @media screen and (max-width: 600px) {
   label,
+  div,
   input[type=text],
   input[type=button],
-  input[type=file]
+  input[type=file],
   textarea {
     flex: 100%;
     min-width: 100%;
@@ -62,4 +60,16 @@ textarea {
 
 body {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  width: 100%;
+  outline: 2px solid red;
+}
+
+#map {
+  flex: 1 1 300px;  
+  min-width: 0;
+  min-height: 400px;
+  max-width: 100%;
+  outline: 2px solid blue;
 }
